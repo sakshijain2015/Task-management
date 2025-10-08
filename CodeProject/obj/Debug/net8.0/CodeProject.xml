@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeProject</name>
+    </assembly>
+    <members>
+        <member name="T:CodeProject.Controllers.TaskController">
+            <summary>
+            Endpoints for the task
+            </summary>
+        </member>
+        <member name="F:CodeProject.Controllers.TaskController._taskService">
+            <summary>
+            task service
+            </summary>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.#ctor(CodeProject.Interfaces.ITaskService)">
+            <summary>
+            Task controller constructor
+            </summary>
+            <param name="taskService"></param>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.GetTaskByIdAsync(System.Int32)">
+            <summary>
+            Get task by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.GetTasksAsync">
+            <summary>
+            Gets all the task records
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.CreateTaskAsync(CodeProject.Models.TaskModelDto)">
+            <summary>
+            Creates a new task
+            </summary>
+            <param name="taskModelDto"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.UpdateTaskStatusByIdAsync(System.Int32,CodeProject.Models.UpdateTaskModelDto)">
+            <summary>
+            Update a task record
+            </summary>
+            <param name="id"></param>
+            <param name="updateTaskModelDto"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:CodeProject.Controllers.TaskController.DeleteTaskByIdAsync(System.Int32)">
+            <summary>
+            Deletes a task by input id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CodeProject.Data.ApplicationDbContext">
+            <summary>
+            EF core db context
+            </summary>
+        </member>
+        <member name="M:CodeProject.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{CodeProject.Data.ApplicationDbContext})">
+            <summary>
+            app db context
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:CodeProject.Data.ApplicationDbContext.Tasks">
+            <summary>
+            Representing tasks table
+            </summary>
+        </member>
+        <member name="M:CodeProject.Data.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Save all changes made to the db
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CodeProject.Interfaces.IApplicationDbContext.Tasks">
+            <summary>
+            Tasks table
+            </summary>
+        </member>
+        <member name="M:CodeProject.Interfaces.IApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Method to save changes to the db
+            </summary>
+            <param name="cancellation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CodeProject.Interfaces.ITaskService">
+            <summary>
+            ITask service interface
+            </summary>
+        </member>
+        <member name="T:CodeProject.Models.TaskModel">
+            <summary>
+            Db entity representing a task stored in a system
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModel.Id">
+            <summary>
+            Id property
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModel.Title">
+            <summary>
+            Title of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModel.Description">
+            <summary>
+            Description of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModel.Status">
+            <summary>
+            Status of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModel.DueDateTime">
+            <summary>
+            Due date of the task
+            </summary>
+        </member>
+        <member name="T:CodeProject.Models.TaskModelDto">
+            <summary>
+            Dedicated request model.
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModelDto.Title">
+            <summary>
+            Title of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModelDto.Description">
+            <summary>
+            Description of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModelDto.Status">
+            <summary>
+            Status of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.TaskModelDto.DueDateTime">
+            <summary>
+            Due date of the task
+            </summary>
+        </member>
+        <member name="T:CodeProject.Models.UpdateTaskModelDto">
+            <summary>
+            Dedicated update model.
+            </summary>
+        </member>
+        <member name="P:CodeProject.Models.UpdateTaskModelDto.Status">
+            <summary>
+            Status of the task
+            </summary>
+        </member>
+        <member name="M:CodeProject.Pages.CreateTaskModel.#ctor(CodeProject.Interfaces.ITaskService)">
+            <summary>
+            assign task service
+            </summary>
+            <param name="taskService"></param>
+        </member>
+        <member name="M:CodeProject.Pages.CreateTaskModel.OnGet">
+            <summary>
+            Get method
+            </summary>
+        </member>
+        <member name="M:CodeProject.Pages.CreateTaskModel.OnPostAsync">
+            <summary>
+            Async Post method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Pages.UpdateTaskModel.#ctor(CodeProject.Interfaces.ITaskService)">
+            <summary>
+            update task mdoel
+            </summary>
+            <param name="taskService"></param>
+        </member>
+        <member name="M:CodeProject.Pages.UpdateTaskModel.OnGetAsync(System.Int32)">
+            <summary>
+            Get task to update
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Pages.UpdateTaskModel.OnPostAsync">
+            <summary>
+            Update task
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Services.TaskService.GetTaskByIdAsync(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Services.TaskService.GetTasksAsync">
+            <summary>
+            Get all tasks from the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CodeProject.Services.TaskService.CreateTaskAsync(CodeProject.Models.TaskModelDto)">
+            <summary>
+            Create task as per the values of the data transfer object supplied
+            </summary>
+            <param name="taskModelDto"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:CodeProject.Services.TaskService.UpdateTaskStatusByIdAsync(System.Int32,System.String)">
+            <summary>
+            Update task by id
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:CodeProject.Services.TaskService.DeleteTaskByIdAsync(System.Int32)">
+            <summary>
+            Delete task by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

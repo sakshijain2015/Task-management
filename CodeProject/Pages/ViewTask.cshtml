@@ -1,0 +1,35 @@
+﻿@page "{id:int}"
+@model CodeProject.Pages.ViewTaskModel
+@{
+
+}
+
+<h1>Task Details</h1>
+
+@if (Model.Task != null)
+{
+	<table class="table">
+		<tr>
+			<th>Title</th>
+			<td>@Model.Task.Title</td>
+		</tr>
+		<tr>
+			<th>Description</th>
+			<td>@Model.Task.Description</td>
+		</tr>
+		<tr>
+			<th>Status</th>
+			<td>@Model.Task.Status</td>
+		</tr>
+		<tr>
+			<th>Due</th>
+			<td>@Model.Task.DueDateTime</td>
+		</tr>
+	</table>
+}
+else
+{
+	<p>Task unavailable</p>
+}
+
+<button class="btn btn-secondary" onclick="window.location.href='/Index'">Close</button>

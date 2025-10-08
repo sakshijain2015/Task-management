@@ -1,0 +1,20 @@
+# Ignore build results
+/bin/
+/obj/
+
+# Ignore user-specific files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore other system files
+Thumbs.db
+Desktop.ini
+
+# Ignore test-specific files
+TestResults/

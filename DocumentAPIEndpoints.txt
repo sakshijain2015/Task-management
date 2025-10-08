@@ -1,0 +1,52 @@
+Task Management System - API Endpoints
+Just noting down all the endpoints made for this small Razor Pages project. This includes creating tasks, viewing, updating, deleting them etc.
+
+Endpoints:
+1. Home page - List of Tasks
+URL: /
+Method: GET
+Purpose: Shows all the tasks.
+Params: None
+
+2. Create Task Page (form)
+URL: /CreateTask
+Method: GET
+Purpose: Displays a form where user can fill title, description, status and due date.
+Params: None
+
+3. Submit New Task
+URL: /CreateTask
+Method: POST
+Purpose: Saves the new task into the database (in-memory db in my case).
+Fields:
+	Required: Title, Status, DueDateTime
+	Optional: Description
+
+4. View a Task
+URL: /ViewTask/{id}
+Method: GET
+Purpose: Open a detailed view for a single task by id.
+Params: id (int)
+
+5. Update Task
+URL: /UpdateTask/{id}
+Method(s):
+	GET: Loads the form with existing data in db
+	POST: Saves the updated task to db
+Params: id(int)
+
+6. Delete a Task
+URL: id={id}&handler=Delete
+Method: POST
+Purpose: Deletes the task based on its id.
+Params: id(int)
+
+Other Notes:
+- Forms use simple validation on required fields like Title and DueDateTime.
+- Deleting asks for a confirmation popup.
+- Using InMemory DB for now so everything resets when the app restarts.
+- Some error handling is there (like if a task id doesn’t exist when you try to edit or delete).
+- Currently assuming that due date/time is changeable by the user. Need to think if there might be a need to keep track of the changes to this field? Otherwise, user may be able to update it as per their wishes and deadlines may keep extending?
+- Status values are considered as New, Pending, In Progress and Completed. Currently there's no logic for the user being able to input only one of these 4 values (except a dropdown on front end, but nothing on back end)
+- Improvements could be: Logging, Duplication checks at db level, enforcing valid values at back end
+- Security Considerations: Task IDs are visible in URLs (e.g., /ViewTask/{id}), which could allow access to other users’ tasks in a real system. Proper authorization checks would mitigate IDOR (Insecure Direct Object References). As this is a demo with an in-memory database, authentication/authorization is not implemented, but would be necessary in a production environment along with logging and input validation.

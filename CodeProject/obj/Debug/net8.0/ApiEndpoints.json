@@ -1,0 +1,86 @@
+[
+  {
+    "ContainingType": "CodeProject.Controllers.TaskController",
+    "Method": "GetTasksAsync",
+    "RelativePath": "api/Task",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetAllTasks"
+  },
+  {
+    "ContainingType": "CodeProject.Controllers.TaskController",
+    "Method": "CreateTaskAsync",
+    "RelativePath": "api/Task",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskModelDto",
+        "Type": "CodeProject.Models.TaskModelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "CreateTask"
+  },
+  {
+    "ContainingType": "CodeProject.Controllers.TaskController",
+    "Method": "GetTaskByIdAsync",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetTaskById"
+  },
+  {
+    "ContainingType": "CodeProject.Controllers.TaskController",
+    "Method": "DeleteTaskByIdAsync",
+    "RelativePath": "api/Task/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "DeleteTask"
+  },
+  {
+    "ContainingType": "CodeProject.Controllers.TaskController",
+    "Method": "UpdateTaskStatusByIdAsync",
+    "RelativePath": "api/Task/{id}/status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateTaskModelDto",
+        "Type": "CodeProject.Models.UpdateTaskModelDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "UpdateTaskStatus"
+  }
+]
