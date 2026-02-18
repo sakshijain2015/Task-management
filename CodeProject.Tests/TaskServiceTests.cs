@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CodeProject.Data;
 using CodeProject.Models;
+using CodeProject.DTOs;
 using CodeProject.Services;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
@@ -97,7 +98,7 @@ namespace CodeProject.Tests
 
             // Assert
             var updatedTask = await _context.Tasks.FindAsync(task.Id);
-            Assert.Equal("Completed", updatedTask.Status);
+            Assert.Equal("Completed", updatedTask?.Status);
         }
 
         [Fact]

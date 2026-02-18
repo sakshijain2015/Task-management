@@ -103,8 +103,8 @@ C:\Users\mayan\source\repos\HMCTSTaskManagement\CodeProject\obj\Debug\net8.0\Cod
 C:\Users\mayan\source\repos\HMCTSTaskManagement\CodeProject\obj\Debug\net8.0\ref\CodeProject.dll
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\appsettings.json
-C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.staticwebassets.endpoints.json
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.staticwebassets.runtime.json
+C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.staticwebassets.endpoints.json
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.exe
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.deps.json
 C:\Users\mayan\source\repos\TaskManagement\CodeProject\bin\Debug\net8.0\CodeProject.runtimeconfig.json

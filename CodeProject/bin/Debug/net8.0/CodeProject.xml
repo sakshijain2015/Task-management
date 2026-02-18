@@ -33,7 +33,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CodeProject.Controllers.TaskController.CreateTaskAsync(CodeProject.Models.TaskModelDto)">
+        <member name="M:CodeProject.Controllers.TaskController.CreateTaskAsync(CodeProject.DTOs.TaskModelDto)">
             <summary>
             Creates a new task
             </summary>
@@ -41,7 +41,7 @@
             <returns></returns>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:CodeProject.Controllers.TaskController.UpdateTaskStatusByIdAsync(System.Int32,CodeProject.Models.UpdateTaskModelDto)">
+        <member name="M:CodeProject.Controllers.TaskController.UpdateTaskStatusByIdAsync(System.Int32,CodeProject.DTOs.UpdateTaskModelDto)">
             <summary>
             Update a task record
             </summary>
@@ -80,6 +80,41 @@
             </summary>
             <param name="cancellationToken"></param>
             <returns></returns>
+        </member>
+        <member name="T:CodeProject.DTOs.TaskModelDto">
+            <summary>
+            Dedicated request model.
+            </summary>
+        </member>
+        <member name="P:CodeProject.DTOs.TaskModelDto.Title">
+            <summary>
+            Title of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.DTOs.TaskModelDto.Description">
+            <summary>
+            Description of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.DTOs.TaskModelDto.Status">
+            <summary>
+            Status of the task
+            </summary>
+        </member>
+        <member name="P:CodeProject.DTOs.TaskModelDto.DueDateTime">
+            <summary>
+            Due date of the task
+            </summary>
+        </member>
+        <member name="T:CodeProject.DTOs.UpdateTaskModelDto">
+            <summary>
+            Dedicated update model.
+            </summary>
+        </member>
+        <member name="P:CodeProject.DTOs.UpdateTaskModelDto.Status">
+            <summary>
+            Status of the task
+            </summary>
         </member>
         <member name="P:CodeProject.Interfaces.IApplicationDbContext.Tasks">
             <summary>
@@ -126,41 +161,6 @@
         <member name="P:CodeProject.Models.TaskModel.DueDateTime">
             <summary>
             Due date of the task
-            </summary>
-        </member>
-        <member name="T:CodeProject.Models.TaskModelDto">
-            <summary>
-            Dedicated request model.
-            </summary>
-        </member>
-        <member name="P:CodeProject.Models.TaskModelDto.Title">
-            <summary>
-            Title of the task
-            </summary>
-        </member>
-        <member name="P:CodeProject.Models.TaskModelDto.Description">
-            <summary>
-            Description of the task
-            </summary>
-        </member>
-        <member name="P:CodeProject.Models.TaskModelDto.Status">
-            <summary>
-            Status of the task
-            </summary>
-        </member>
-        <member name="P:CodeProject.Models.TaskModelDto.DueDateTime">
-            <summary>
-            Due date of the task
-            </summary>
-        </member>
-        <member name="T:CodeProject.Models.UpdateTaskModelDto">
-            <summary>
-            Dedicated update model.
-            </summary>
-        </member>
-        <member name="P:CodeProject.Models.UpdateTaskModelDto.Status">
-            <summary>
-            Status of the task
             </summary>
         </member>
         <member name="M:CodeProject.Pages.CreateTaskModel.#ctor(CodeProject.Interfaces.ITaskService)">
@@ -212,7 +212,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:CodeProject.Services.TaskService.CreateTaskAsync(CodeProject.Models.TaskModelDto)">
+        <member name="M:CodeProject.Services.TaskService.CreateTaskAsync(CodeProject.DTOs.TaskModelDto)">
             <summary>
             Create task as per the values of the data transfer object supplied
             </summary>

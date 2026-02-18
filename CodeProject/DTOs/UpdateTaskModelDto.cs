@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace CodeProject.Models
+namespace CodeProject.DTOs
 {
     /// <summary>
     /// Dedicated update model.

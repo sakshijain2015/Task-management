@@ -1,4 +1,5 @@
-﻿using CodeProject.Models;
+﻿using CodeProject.DTOs;
+using CodeProject.Models;
 
 namespace CodeProject.Interfaces
 {
